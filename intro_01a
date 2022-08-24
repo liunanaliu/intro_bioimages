@@ -1,0 +1,45 @@
+an image is just a matrix of numbers, 
+
+pixel is picture element
+
+the edges between pixels are an artefact, in reality, they do not exist!
+
+pixel size is a digital property of am image
+
+you configure it durinng the imaging session at the microscope.
+
+it is not resolution!!!
+
+resolution is a property of your image system.
+
+the measure of how close object can be in an image while still being differebtiable, called spatial resolution.
+
+a bit is the smallest memory unit in computers, atomic data.
+
+the bit-depth n enumerates how many different intensity values are present in an image: 2nd grey values
+
+in microscopy, images are usually stored as 8, 12 or 16-bit images
+
+when working with 8-bit images, 256 different gray values can be saved.
+
+lookup table decides how the images is displayed on screen.
+so choose visualization of your color tables wisely.
+
+a histogram shows the probability distribution of pixel intensities,
+is a summary if images
+
+the probabilty of a pixel having a certain grey value can be measured by counting pixels and 
+calculating the frequency of the given intensity
+
+whenever you see a histogram, try to image the lookup table on the x-axis
+
+that is usually the numbers 0 - 255
+
+depending on software: 100 - 200 = 0, 100 - 200 = 155
+
+100 + 200 = 255, 100 + 200 = 45
+
+solution : when doing math with pixels, avoid bit-depth 8!!!
+
+
+
