@@ -4,3 +4,24 @@ subtract background --- gaussian blur --- division --- maxima detection ---
 
 seeded watershed --- particles analysis / filtering --- ROI manager / visualization
 
+popular basic pipeline for particles : thresholding + partcile analysis 
+
+use more double click and right click
+
+for distance measurement, use the M key to store a length-measurement to the reslut table!!!
+
++ / - key for zoom inn / out
+
+modify brightness / contrast, try to window the object you could like to see the best,
+which is maybe the hill i the histogram!!!
+
+also applied in multi-channel iamges, while individually
+
+intensity measurement also depend on the selected channel
+
+lookup table are free of choice, they may or may not express which wavelength has been imaged before,
+but try not to do arts.
+
+regions of interest, 
+
+https://forum.image.sc/ !!!!!!
