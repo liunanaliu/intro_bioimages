@@ -1,0 +1,56 @@
+an image processing filter is an operation on an image
+
+filters do not do magic, they can not make things visible which are not in the image
+
+it takes an image and produces a new image out of it
+
+filters change pixel values
+
+application examples: noise-reduction, artefact-removal, contrast enhancement, correct uneven illumination
+
+###########################################################################################################################
+noise is a general term for unwanted modifications that a signal may suffer during capture, storage, transmission, processing or conversion
+
+in microscopy, including: read out noise, dark noise, shot noise, physical / optical effect, biological / physiological / structural effect
+
+pixel intensity = target intensity + background + camera offset + noise
+
+effects of noise can be reduced by longer exposure times at the price of other effects such as motion blur and phototoxicity
+
+we need to remove the noise to help the computer interpreting the image, otherwise, it could not recongnise object
+
+image with noise --- blurring --- thresholding --- recognization 
+
+including methods of gaussian, median, 
+
+linear filters replace each pixel value with a linear combination of surrounding pixels,
+basically, linear filtering is a convolution,
+it needs a kernel (weight template)
+which will lead to a new image where each pixel is replaced by the weighted sum of pixel values in the neighbourhood.
+
+kernels are matrices describing a linear filter.
+
+we convolve an image with a kernel, convolution operator is * , like mean, gaussian, sobel
+
+non-linear filters also replace pixel value inside as rolling window but in a non linear function, like min, median, max,
+variance, and standard deviation.
+
+edge detection might make sense to measure surfaces or follow structures which are located between birght and dark structures.
+
+image --- median filter --- edge detection, 
+nuclear envelope marked with lap2d-gfp + median filter 
+
+microscopist may know fancy alternatives to computationa edge detection.
+
+#################################################################################################
+differentiating objects is easier if their background intensity is equal, via subtract background
+
+extracted background --- substracted background or divided by background
+
+in order to allow the computer analyzing individual objects in images, we need to segment and label them first, like thresholding + binary watershed
+machine learning
+
+pre-processing: before creating mask, need - noise removal via median filter, background substraction and contrast equivalisation
+
+threshholding: to separate background from regions of interest by setting a minimum and / or minimun signal intensity as threshold
+
