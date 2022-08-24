@@ -1,0 +1,6 @@
+loe level image processing in all shades of gray:
+
+subtract background --- gaussian blur --- division --- maxima detection ---
+
+seeded watershed --- particles analysis / filtering --- ROI manager / visualization
+
