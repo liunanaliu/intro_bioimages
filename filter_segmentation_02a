@@ -85,3 +85,11 @@ combined methods allow correcting outlines
 refining masks : watershed
 to cut connectedd objects, the watershed algorithm is a very powerful tool
 on masks, we use the binary watershed
+
+##################################################################################
+connected components labelling 
+the maximum intensity of a labelled map corresponds to the number of objects.
+
+label map visualization 
+label maps can be nicely visualzed with the right lookup table
+
