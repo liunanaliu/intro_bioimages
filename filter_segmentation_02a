@@ -54,3 +54,34 @@ pre-processing: before creating mask, need - noise removal via median filter, ba
 
 threshholding: to separate background from regions of interest by setting a minimum and / or minimun signal intensity as threshold
 
+####################################################################################################
+overblurring to improve thresholding results 
+in case thresholding algorithms outline the wrong structure, blurring may help
+however, do not continue processing blurring imshg, continue with the original.
+
+do not enter a manual threshold, 
+it is in general not reproducible and not objective.
+
+chooose a theshold algorithm and stick to it for the whole study, 
+if you select a new method for every image, the procedure is not reproducible and not objective.
+
+there is no perfect method, there will be always this one image where thresholding fails.
+
+############################################################################################################
+binary mask image may not be perfect immediately after thresholding, 
+
+thresholding --- binary closing --- binary opening
+
+refining mask : erosion
+every pixel with at least one black neighbour becomes black.
+
+refining mask : dilation
+every pixel with at least one white neighbour becomes white.
+
+refining mask : erosion & dilation
+combined methods allow correcting outlines
+
+#############################################################################################################
+refining masks : watershed
+to cut connectedd objects, the watershed algorithm is a very powerful tool
+on masks, we use the binary watershed
